@@ -20,17 +20,19 @@ Onnx model will be stored in *./models/onnx/* directory by default or to change 
 
 
 To install OpenMPI 
-1. `sudo -i`
-2. `mkdir /tmp/openmpi && \`
-3. `cd /tmp/openmpi && \`
-4. `wget https://www.open-mpi.org/software/ompi/v4.0/downloads/openmpi-4.0.0.tar.gz && \`
-5. `tar zxf openmpi-4.0.0.tar.gz && \`
-6. `cd openmpi-4.0.0 && \`
-7. `./configure --enable-orterun-prefix-by-default && \`
-8. `make -j $(nproc) all && \`
-9. `make install && \`
-10. `ldconfig && \`
-11. `rm -rf /tmp/openmpi`
+```
+sudo -i
+mkdir /tmp/openmpi && \
+cd /tmp/openmpi && \
+wget https://www.open-mpi.org/software/ompi/v4.0/downloads/openmpi-4.0.0.tar.gz && \
+tar zxf openmpi-4.0.0.tar.gz && \
+cd openmpi-4.0.0 && \
+./configure --enable-orterun-prefix-by-default && \
+make -j $(nproc) all && \
+make install && \
+ldconfig && \
+rm -rf /tmp/openmpi
+```
 
 To install pytorch with cuda 10.2
 1. `pip install torch torchvision`
